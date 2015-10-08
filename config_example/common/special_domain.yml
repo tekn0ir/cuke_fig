@@ -1,0 +1,10 @@
+:top_level: common_top_level
+
+:group:
+  :first: common_group_first
+  :second: common_group_second
+
+:list:
+  - common_one
+  - common_two
+  - common_three

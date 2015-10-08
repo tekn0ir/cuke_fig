@@ -7,7 +7,7 @@ them easily accessible within the steps.
 
 ### Bug Reports
 
-If you are sure that it's a bug in Capybara, open a new [issue] and try to
+If you are sure that it's a bug in Fig, open a new [issue] and try to
 answer the following questions:
 
 - What did you do?

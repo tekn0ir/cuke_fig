@@ -3,7 +3,7 @@ Gem::Specification.new do |s|
   s.version     = '0.0.1'
   s.date        = '2015-10-08'
   s.summary     = 'A YAML file config library for cucumber'
-  s.description = 'Multilevel configuration for cucumber'
+  s.description = 'Multilevel configuration for cucumber tests'
   s.authors     = ['Anders Åslund']
   s.email       = 'anders.aslund@teknoir.se'
   s.files       = Dir['lib/**/*']

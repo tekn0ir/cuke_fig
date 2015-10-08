@@ -2,6 +2,7 @@
 
 [![Build Status](https://secure.travis-ci.org/tekn0ir/cuke_fig.png)](http://travis-ci.org/tekn0ir/cuke_fig)
 [![Dependency Status](https://gemnasium.com/tekn0ir/cuke_fig.png)](https://gemnasium.com/tekn0ir/cuke_fig)
+[![Code Climate](https://codeclimate.com/github/tekn0ir/cuke_fig.png)](https://codeclimate.com/github/tekn0ir/cuke_fig)
 
 CukeFig helps you set up multilevel configurations for your cucumber tests and makes
 them easily accessible within the steps.

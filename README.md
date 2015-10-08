@@ -1,6 +1,7 @@
 # CukeFig
 
 [![Build Status](https://secure.travis-ci.org/tekn0ir/cuke_fig.png)](http://travis-ci.org/tekn0ir/cuke_fig)
+[![Dependency Status](https://gemnasium.com/tekn0ir/cuke_fig.png)](https://gemnasium.com/tekn0ir/cuke_fig)
 
 CukeFig helps you set up multilevel configurations for your cucumber tests and makes
 them easily accessible within the steps.
@@ -70,14 +71,10 @@ The endpoints.yml file in the dev folder can look like this:
 You can now write your step definitions like so:
 
 ```ruby
-Then(/^I can use the config like so$/) do |keyword|
-    conn = Faraday.new(:url => endpoints['myapi']['url']) do |faraday|
-      faraday.request  :url_encoded             # form-encode POST params
-      faraday.response :logger                  # log requests to STDOUT
-      faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
-    end
+Then(/^I can use the endpoints config like so$/) do
+    conn = Faraday.new(:url => endpoints['myapi']['url'])
     
-    response = conn.get endpoints['myapi']['get_something_route']     # GET http://sushi.com/nigiri/sake.json
+    response = conn.get endpoints['myapi']['get_something_route']
     response.body
 end
 ```

@@ -1,4 +1,4 @@
-Feature: Fig
+Feature: CukeFig
   As a frequent cucumber user
   I would like to be able to create multilevel configs
   To be able to reuse my tests for different environments

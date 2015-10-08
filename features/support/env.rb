@@ -2,7 +2,7 @@ require 'rubygems'
 require 'bundler/setup'
 require 'cucumber'
 require 'rspec/expectations'
-require 'fig'
+require 'cuke_fig'
 
 Bundler.setup(:default, :development)
 

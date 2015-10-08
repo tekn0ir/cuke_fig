@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name        = 'fig'
+  s.name        = 'cuke_fig'
   s.version     = '0.0.1'
   s.date        = '2015-10-08'
   s.summary     = 'A YAML file config library for cucumber'

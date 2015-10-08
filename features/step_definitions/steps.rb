@@ -20,11 +20,11 @@ Given(/^I have an overridden config$/) do
 end
 
 When(/^I setup the common config$/) do
-  Fig::setup @common
+  CukeFig::setup @common
 end
 
 When(/^I setup the (\w+\d+) config$/) do |env|
-  Fig::setup @common, environment: env.to_sym, env_configs: @env_configs, override: @override
+  CukeFig::setup @common, environment: env.to_sym, env_configs: @env_configs, override: @override
 end
 
 Then(/^I can use the (.+) config$/) do |keyword|

@@ -1,5 +1,5 @@
 
-module Fig
+module CukeFig
   class Config
     attr_reader :global_config, :methods
 
@@ -64,7 +64,7 @@ module Fig
     end
   end
 
-  extend(Fig)
+  extend(CukeFig)
 end
 
-World(Fig)
+World(CukeFig)

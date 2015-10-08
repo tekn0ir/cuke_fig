@@ -1,11 +1,17 @@
 language: ruby
 rvm:
-  - 1.9.3
-  - 2.0.0
-  - 2.1
-  - 2.2
-  - jruby-9.0.0.0
+- 2.0.0
+- 2.1
+- 2.2
+- jruby-9.0.0.0
 gemfile:
-  - Gemfile
-
-script: "bundle exec rake travis"
+- Gemfile
+script: bundle exec rake travis
+deploy:
+  provider: rubygems
+  api_key:
+    secure: PWTPR8fkwL61OaUo6UucqAKfDrsnaSlasbcW4Mnpk39bNZ8Dh9/OPJ6MiCz3In4kRekmR/B9mQ91SYTJJbqx/Ns6ygBl2xneKEIXZ+CaTT7P5431ied1T39tjce4vNh22uJjeikGyAlWMc0djXEz4gdlwxAGdTqvIiMLEQyLhThOD7CjSAbmoR+ozQ76q9XpMguc62tvS7lv3AaWGOB2gbuPPWm1zwW9z+mtOMtRNZsQUBLbdcrV6Nduwn+sllQJQZ6TrYLhgiqisC9s9KQgnwKcjBNiLTi8nXt6XCnQD1kNTNGXwaOA9Ls6EwN8M76+y+7Sm1m1JaAMrYyauWAkzqeSehuWN8yA3pSte/cgLby6sH2Ht/OG805PxNPe5clopBqdczRnkn1zGV5jAJauO57UTLfMUeXG0TI+94Xl5JQoeKcr867VOmzHyvMkkNXFMinRJxuT1iy3/cJaOb71JziAGssH1e9If85VURj7Yogmqj/0YlDF+j1GJKBf43cJQOMfuZ1AMp886jy80Tc6vKGDlD/sctmP72LnJ8GoZKcEVF5xqEt0HcAZTwS1pyWUB0e+RKKQtuSM4V/jZwvf60UF9ww+UiEJfMbv3IMnOSiLg0O/G8ZOdYuhWB+AitT0/2SCaugCMfdYh2W7H6bPjmLAFLN33U4GkvS7fAnuN54=
+  gem: cuke_fig
+  on:
+    tags: true
+    repo: tekn0ir/cuke_fig

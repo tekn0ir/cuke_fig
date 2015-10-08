@@ -6,7 +6,7 @@ rvm:
 - jruby-9.0.0.0
 gemfile:
 - Gemfile
-script: bundle exec rake travis
+script: CODECLIMATE_REPO_TOKEN=e43ba4f958b898fe2a01a0fb7a57b4d8051ef96e7dde5c59a7f7d5dba3dd2467 bundle exec rake travis
 deploy:
   provider: rubygems
   api_key:

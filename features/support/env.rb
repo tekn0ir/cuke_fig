@@ -1,8 +1,13 @@
+require "codeclimate-test-reporter"
+
+CodeClimate::TestReporter.start
+
 require 'rubygems'
 require 'bundler/setup'
 require 'cucumber'
 require 'rspec/expectations'
 require 'cuke_fig'
+
 
 Bundler.setup(:default, :development)
 

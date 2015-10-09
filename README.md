@@ -1,5 +1,6 @@
 # CukeFig
 
+[![Gem Version](https://badge.fury.io/rb/cuke_fig.svg)](https://badge.fury.io/rb/cuke_fig)
 [![Build Status](https://travis-ci.org/tekn0ir/cuke_fig.svg?branch=master)](https://travis-ci.org/tekn0ir/cuke_fig)
 [![Dependency Status](https://gemnasium.com/tekn0ir/cuke_fig.png)](https://gemnasium.com/tekn0ir/cuke_fig)
 [![Code Climate](https://codeclimate.com/github/tekn0ir/cuke_fig/badges/gpa.svg)](https://codeclimate.com/github/tekn0ir/cuke_fig)

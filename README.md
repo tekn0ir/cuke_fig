@@ -43,13 +43,13 @@ config
 See more examples in the config_example folder. Initialize your configuration in the env.rb file like so (example):
 
 ```ruby
-common = Dir.glob(File.join(Dir.pwd, 'features/support/config/common/*.yml'))
+common = 'features/support/config/common/*.yml'
 env_configs = {
-  dev: Dir.glob(File.join(Dir.pwd, 'features/support/config/dev/*.yml')),
-  qa: Dir.glob(File.join(Dir.pwd, 'features/support/config/qa/*.yml')),
-  prod: Dir.glob(File.join(Dir.pwd, 'features/support/config/qa/*.yml'))
+  dev: 'features/support/config/dev/*.yml',
+  qa: 'features/support/config/qa/*.yml',
+  prod: 'features/support/config/qa/*.yml'
 }
-override = Dir.glob(File.join(Dir.pwd, 'features/support/config/override/*.yml'))
+override = 'features/support/config/override/*.yml'
 
 CukeFig::setup common, environment: ENV.fetch('ENV', :dev), env_configs: env_configs, override: override
 ```

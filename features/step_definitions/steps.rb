@@ -1,22 +1,22 @@
 Given(/^I have a common config$/) do
-  @common = Dir.glob(File.join(Dir.pwd, 'config_example/common/*.yml'))
+  @common = 'config_example/common/*.yml'
 end
 
 Given(/^I have a multilevel config$/) do
-  @common = Dir.glob(File.join(Dir.pwd, 'config_example/common/*.yml'))
+  @common = 'config_example/common/*.yml'
   @env_configs = {
-      env1: Dir.glob(File.join(Dir.pwd, 'config_example/env1/*.yml')),
-      env2: Dir.glob(File.join(Dir.pwd, 'config_example/env2/*.yml')),
+      env1: 'config_example/env1/*.yml',
+      env2: 'config_example/env2/*.yml',
   }
 end
 
 Given(/^I have an overridden config$/) do
-  @common = Dir.glob(File.join(Dir.pwd, 'config_example/common/*.yml'))
+  @common = 'config_example/common/*.yml'
   @env_configs = {
-      env1: Dir.glob(File.join(Dir.pwd, 'config_example/env1/*.yml')),
-      env2: Dir.glob(File.join(Dir.pwd, 'config_example/env2/*.yml')),
+      env1: 'config_example/env1/*.yml',
+      env2: 'config_example/env2/*.yml',
   }
-  @override = Dir.glob(File.join(Dir.pwd, 'config_example/override/*.yml'))
+  @override = 'config_example/override/*.yml'
 end
 
 When(/^I setup the common config$/) do

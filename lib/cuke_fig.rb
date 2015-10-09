@@ -45,9 +45,9 @@ module CukeFig
 
   def expand_config_files(common, env_config: nil, override: nil)
     expanded = []
-    expanded.concat common unless common.nil?
-    expanded.concat env_config unless env_config.nil?
-    expanded.concat override unless override.nil?
+    expanded.concat Dir.glob(File.join(Dir.pwd, common)) unless common.nil?
+    expanded.concat Dir.glob(File.join(Dir.pwd, env_config)) unless env_config.nil?
+    expanded.concat Dir.glob(File.join(Dir.pwd, override)) unless override.nil?
     expanded
   end
 

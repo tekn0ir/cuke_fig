@@ -1,8 +1,10 @@
 language: ruby
 rvm:
+- 2.0
+- 2.1
 - 2.2
 - 2.3.1
-- jruby-9.0.0.0
+- jruby-9.0.5.0
 gemfile:
 - Gemfile
 script: CODECLIMATE_REPO_TOKEN=e43ba4f958b898fe2a01a0fb7a57b4d8051ef96e7dde5c59a7f7d5dba3dd2467 bundle exec rake travis

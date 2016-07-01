@@ -20,21 +20,24 @@ Given(/^I have an overridden config$/) do
 end
 
 When(/^I setup the common config$/) do
-  CukeFig::setup @common
+  setup @common
 end
 
 When(/^I setup the (\w+\d+) config$/) do |env|
-  CukeFig::setup @common, environment: env.to_sym, env_configs: @env_configs, override: @override
+  setup @common, environment: env.to_sym, env_configs: @env_configs, override: @override
 end
 
 Then(/^I can use the (.+) config$/) do |keyword|
-  expect(special_domain).to match( { top_level: a_string_starting_with(keyword),
-                                    group: { first: a_string_starting_with(keyword), second: a_string_starting_with(keyword)},
-                                    list: match_array([a_string_starting_with(keyword), a_string_starting_with(keyword), a_string_starting_with(keyword)]) })
+  expect(special_domain.top_level).to start_with(keyword)
+  expect(special_domain.group.first).to start_with(keyword)
+  expect(special_domain.group.second).to start_with(keyword)
+  expect(special_domain.list).to match_array([a_string_starting_with(keyword), a_string_starting_with(keyword), a_string_starting_with(keyword)])
+
   keyword = 'common'
-  expect(common_domain).to match( { top_level: a_string_starting_with(keyword),
-                                    group: { first: a_string_starting_with(keyword), second: a_string_starting_with(keyword)},
-                                    list: match_array([a_string_starting_with(keyword), a_string_starting_with(keyword), a_string_starting_with(keyword)]) })
+  expect(common_domain.top_level).to start_with(keyword)
+  expect(common_domain.group.first).to start_with(keyword)
+  expect(common_domain.group.second).to start_with(keyword)
+  expect(common_domain.list).to match_array([a_string_starting_with(keyword), a_string_starting_with(keyword), a_string_starting_with(keyword)])
 end
 
 

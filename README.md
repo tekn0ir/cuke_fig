@@ -52,7 +52,7 @@ env_configs = {
 }
 override = 'features/support/config/override/*.yml'
 
-CukeFig::setup common, environment: ENV.fetch('ENV', :dev), env_configs: env_configs, override: override
+setup common, environment: ENV.fetch('ENV', :dev), env_configs: env_configs, override: override
 ```
 
 Any number of env_configs can be passed in. Any number of YAML files can be created in each folder. 
@@ -75,9 +75,9 @@ You can now write your step definitions like so:
 
 ```ruby
 Then(/^I can use the endpoints config like so$/) do
-    conn = Faraday.new(:url => endpoints['myapi']['url'])
+    conn = Faraday.new(:url => endpoints.myapi.url)
     
-    response = conn.get endpoints['myapi']['get_something_route']
+    response = conn.get endpoints.myapi.get_something_route
     response.body
 end
 ```
